@@ -1,5 +1,8 @@
 import type { Metadata } from 'next';
 import { DM_Serif_Display, IBM_Plex_Sans, IBM_Plex_Mono } from 'next/font/google';
+import { Nav } from '@/components/nav';
+import { Footer } from '@/components/footer';
+import { CustomCursor } from '@/components/custom-cursor';
 import '@/styles/globals.css';
 
 const dmSerifDisplay = DM_Serif_Display({
@@ -54,7 +57,14 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       lang="en"
       className={`${dmSerifDisplay.variable} ${ibmPlexSans.variable} ${ibmPlexMono.variable}`}
     >
-      <body>{children}</body>
+      <body>
+        <CustomCursor />
+        <Nav />
+        <main id="main-content" className="pt-14">
+          {children}
+        </main>
+        <Footer />
+      </body>
     </html>
   );
 }
