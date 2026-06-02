@@ -8,10 +8,12 @@ interface TypewriterProps {
 }
 
 export function Typewriter({ text, delay = 45 }: TypewriterProps) {
-  const [displayed, setDisplayed] = useState('');
-  const [done, setDone] = useState(false);
+  const [displayed, setDisplayed] = useState(text);
+  const [done, setDone] = useState(true);
 
   useEffect(() => {
+    setDisplayed('');
+    setDone(false);
     let i = 0;
     const interval = setInterval(() => {
       i++;
