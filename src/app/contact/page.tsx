@@ -54,8 +54,7 @@ export default function ContactPage() {
             Get in touch
           </h1>
           <p style={{ color: 'var(--color-muted)', lineHeight: '1.75' }}>
-            I&apos;m open to senior remote engineering contracts, collaborations, and conversations
-            that go somewhere. X is the fastest way to reach me. For longer things, email works.
+            X is the fastest way to reach me. For longer things, email works.
           </p>
         </div>
 

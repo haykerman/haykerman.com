@@ -12,7 +12,7 @@ export function Footer() {
           className="font-mono text-xs"
           style={{ color: 'var(--color-muted)' }}
         >
-          © {year} Hayk Martirosyan
+          © {year} Hayk Baghdasaryan
         </span>
         <div className="flex items-center gap-6">
           {[

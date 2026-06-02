@@ -6,7 +6,6 @@ interface StatusItem {
 const STATUS: StatusItem[] = [
   { key: 'status', value: 'building ByeCycle' },
   { key: 'location', value: 'Yerevan, Armenia' },
-  { key: 'open to', value: 'contracts / collabs' },
 ];
 
 export function StatusBlock() {

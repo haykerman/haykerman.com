@@ -26,7 +26,7 @@ export default function AboutPage() {
               color: 'var(--color-text)',
             }}
           >
-            Hayk Martirosyan
+            Hayk Baghdasaryan
           </h1>
         </div>
 

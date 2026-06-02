@@ -2,7 +2,6 @@ import type { Metadata } from 'next';
 import { DM_Serif_Display, IBM_Plex_Sans, IBM_Plex_Mono } from 'next/font/google';
 import { Nav } from '@/components/nav';
 import { Footer } from '@/components/footer';
-import { CustomCursor } from '@/components/custom-cursor';
 import '@/styles/globals.css';
 
 const dmSerifDisplay = DM_Serif_Display({
@@ -28,8 +27,8 @@ const ibmPlexMono = IBM_Plex_Mono({
 
 export const metadata: Metadata = {
   title: {
-    default: 'Hayk Martirosyan',
-    template: '%s — Hayk Martirosyan',
+    default: 'Hayk Baghdasaryan',
+    template: '%s — Hayk Baghdasaryan',
   },
   description: 'Engineer. Builder. Thinking out loud. Based in Yerevan.',
   metadataBase: new URL('https://haykerman.com'),
@@ -37,7 +36,7 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'en_US',
     url: 'https://haykerman.com',
-    siteName: 'Hayk Martirosyan',
+    siteName: 'Hayk Baghdasaryan',
     images: [{ url: '/og.png', width: 1200, height: 630 }],
   },
   twitter: {
@@ -65,7 +64,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         >
           Skip to main content
         </a>
-        <CustomCursor />
         <Nav />
         <main id="main-content" className="pt-14">
           {children}

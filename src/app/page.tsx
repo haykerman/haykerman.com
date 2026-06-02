@@ -6,7 +6,7 @@ const Typewriter = dynamic(
   () => import('@/components/typewriter').then((m) => ({ default: m.Typewriter })),
   {
     ssr: false,
-    loading: () => <span>Hayk Martirosyan</span>,
+    loading: () => <span>Hayk Baghdasaryan</span>,
   }
 );
 
@@ -24,7 +24,7 @@ export default function HomePage() {
             color: 'var(--color-text)',
           }}
         >
-          <Typewriter text="Hayk Martirosyan" delay={60} />
+          <Typewriter text="Hayk Baghdasaryan" delay={60} />
         </h1>
 
         <p
@@ -40,7 +40,7 @@ export default function HomePage() {
         >
           9 years building software. 6 at{' '}
           <a
-            href="https://tidepoolabs.com"
+            href="https://tidepoollabs.com"
             className="underline underline-offset-2 transition-opacity hover:opacity-80"
             style={{ color: 'var(--color-text)' }}
             target="_blank"

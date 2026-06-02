@@ -33,7 +33,7 @@ export function Nav() {
           href="/"
           className="font-mono text-sm tracking-widest uppercase transition-opacity hover:opacity-70"
           style={{ color: 'var(--color-text)' }}
-          aria-label="Hayk Martirosyan — home"
+          aria-label="Hayk Baghdasaryan — home"
         >
           hm<span style={{ color: 'var(--color-accent)' }}>.</span>
         </Link>
