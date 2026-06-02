@@ -104,6 +104,9 @@ export function ProjectCard({ project }: ProjectCardProps) {
             href={project.links.writeup}
             className="font-mono text-xs underline underline-offset-2 transition-opacity hover:opacity-70"
             style={{ color: 'var(--color-muted)' }}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label={`Read more about ${project.title}`}
           >
             read more →
           </a>

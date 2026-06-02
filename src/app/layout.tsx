@@ -58,6 +58,13 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       className={`${dmSerifDisplay.variable} ${ibmPlexSans.variable} ${ibmPlexMono.variable}`}
     >
       <body>
+        <a
+          href="#main-content"
+          className="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-4 focus:z-[9999] focus:px-4 focus:py-2 focus:rounded focus:text-sm"
+          style={{ backgroundColor: 'var(--color-accent)', color: 'var(--color-bg)', fontFamily: 'var(--font-mono)' }}
+        >
+          Skip to main content
+        </a>
         <CustomCursor />
         <Nav />
         <main id="main-content" className="pt-14">

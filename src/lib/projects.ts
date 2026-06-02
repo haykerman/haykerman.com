@@ -5,10 +5,14 @@ import type { Project } from './types';
 
 const projectsDir = path.join(process.cwd(), 'content/projects');
 
+let projectsCache: Project[] | null = null;
+
 export function getProjects(): Project[] {
+  if (projectsCache) return projectsCache;
+
   if (!fs.existsSync(projectsDir)) return [];
 
-  return fs
+  const result = fs
     .readdirSync(projectsDir)
     .filter((f) => f.endsWith('.mdx'))
     .map((filename) => {
@@ -27,6 +31,9 @@ export function getProjects(): Project[] {
         content,
       } satisfies Project;
     });
+
+  projectsCache = result;
+  return projectsCache;
 }
 
 export function getProject(slug: string): Project | undefined {

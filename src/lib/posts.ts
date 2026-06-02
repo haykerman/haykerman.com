@@ -6,10 +6,14 @@ import type { Post } from './types';
 
 const postsDir = path.join(process.cwd(), 'content/blog');
 
+let postsCache: Post[] | null = null;
+
 export function getPosts(): Post[] {
+  if (postsCache) return postsCache;
+
   if (!fs.existsSync(postsDir)) return [];
 
-  return fs
+  const result = fs
     .readdirSync(postsDir)
     .filter((f) => f.endsWith('.mdx'))
     .map((filename) => {
@@ -21,9 +25,7 @@ export function getPosts(): Post[] {
       return {
         slug,
         title: data.title ?? slug,
-        date: data.date instanceof Date
-          ? data.date.toISOString().slice(0, 10)
-          : data.date ? String(data.date) : '',
+        date: data.date ? (data.date instanceof Date ? data.date.toISOString().slice(0, 10) : String(data.date)) : new Date().toISOString().slice(0, 10),
         description: data.description ?? '',
         tags: Array.isArray(data.tags) ? data.tags : [],
         readingTime: Math.max(1, Math.ceil(rt.minutes)),
@@ -31,6 +33,9 @@ export function getPosts(): Post[] {
       } satisfies Post;
     })
     .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+
+  postsCache = result;
+  return postsCache;
 }
 
 export function getPost(slug: string): Post | undefined {

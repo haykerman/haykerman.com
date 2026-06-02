@@ -1,6 +1,14 @@
 import Link from 'next/link';
-import { Typewriter } from '@/components/typewriter';
+import dynamic from 'next/dynamic';
 import { StatusBlock } from '@/components/status-block';
+
+const Typewriter = dynamic(
+  () => import('@/components/typewriter').then((m) => ({ default: m.Typewriter })),
+  {
+    ssr: false,
+    loading: () => <span>Hayk Martirosyan</span>,
+  }
+);
 
 export default function HomePage() {
   return (
