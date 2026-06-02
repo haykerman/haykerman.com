@@ -13,7 +13,7 @@ const APPS = [
     description:
       "Free media tracker for keeping tabs on what you're watching, reading, and playing. No ads, no subscription, no noise — just a clean place to log it.",
     status: 'live' as const,
-    appStoreUrl: 'https://apps.apple.com/app/darack/id0000000000',
+    appStoreUrl: 'https://apps.apple.com/us/app/darack-media-tracker/id6766096397',
   },
   {
     name: 'ByeCycle',
