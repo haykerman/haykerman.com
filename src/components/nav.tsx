@@ -35,7 +35,7 @@ export function Nav() {
           style={{ color: 'var(--color-text)' }}
           aria-label="Hayk Baghdasaryan — home"
         >
-          hm<span style={{ color: 'var(--color-accent)' }}>.</span>
+          hb<span style={{ color: 'var(--color-accent)' }}>.</span>
         </Link>
 
         {/* Desktop links */}
